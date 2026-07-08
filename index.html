@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premie 4S</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app-frame">
+    <div class="soft-shape shape-rose"></div>
+    <div class="soft-shape shape-mint"></div>
+    <div class="soft-shape shape-lavender"></div>
+
+    <nav class="top-menu" aria-label="เมนูบทเรียนทั้งหมด">
+      <button class="round-btn" type="button" data-back aria-label="กลับหน้าก่อน"><i class="ti ti-arrow-left"></i></button>
+      <button class="toc-btn" type="button" data-page-target="home">บทเรียนทั้งหมด</button>
+    </nav>
+
+    <section class="page active home-page" id="page-home" data-page="home">
+      <header class="home-hero">
+        <div class="home-mark" aria-hidden="true"><i class="ti ti-baby-carriage"></i></div>
+        <p class="eyebrow">Premie 4S</p>
+        <h1><span>การกระตุ้น</span><span>การดูดและการกลืน</span></h1>
+        <p>เว็บให้ความรู้สำหรับพยาบาลและนิสิตพยาบาล เรื่องการดูแลทารกคลอดก่อนกำหนดก่อนเข้าสู่การกินนมทางปาก</p>
+        <button class="primary-btn" type="button" data-page-target="ch1">เริ่มเรียนรู้</button>
+      </header>
+
+      <section class="lesson-panel" aria-label="บทเรียนทั้งหมด 5 บท">
+        <div class="lesson-heading">
+          <span>บทเรียนทั้งหมด</span>
+          <strong>5 บทเรียน</strong>
+        </div>
+        <div class="book-grid">
+          <button class="book rose" type="button" data-page-target="ch1">
+            <span>บทที่ 1</span>
+            <i class="ti ti-heartbeat" aria-hidden="true"></i>
+            <strong>ความสำคัญของการดูดกลืน</strong>
+          </button>
+          <button class="book apricot" type="button" data-page-target="ch2">
+            <span>บทที่ 2</span>
+            <i class="ti ti-list-check" aria-hidden="true"></i>
+            <strong>เกณฑ์ความพร้อมของทารก</strong>
+          </button>
+          <button class="book mint" type="button" data-page-target="ch3">
+            <span>บทที่ 3</span>
+            <i class="ti ti-stethoscope" aria-hidden="true"></i>
+            <strong>การเตรียมอุปกรณ์</strong>
+          </button>
+          <button class="book lavender" type="button" data-page-target="ch4">
+            <span>บทที่ 4</span>
+            <i class="ti ti-hand-click" aria-hidden="true"></i>
+            <strong>ท่ากระตุ้นการดูดกลืน</strong>
+          </button>
+          <button class="book plain" type="button" data-page-target="ch5">
+            <span>บทที่ 5</span>
+            <i class="ti ti-clipboard-check" aria-hidden="true"></i>
+            <strong>Post-test</strong>
+          </button>
+        </div>
+      </section>
+    </section>
+
+    <section class="page" id="page-ch1" data-page="ch1">
+      <header class="chapter-hero rose">
+        <span>บทที่ 1</span>
+        <h2>ความสำคัญของการดูดกลืน</h2>
+        <p>ทำความเข้าใจเหตุผลที่ทารกคลอดก่อนกำหนดต้องได้รับการประเมินและกระตุ้นอย่างเหมาะสม</p>
+      </header>
+
+      <!-- [POSTER SLOT] id=ch1-poster
+           คือ: ภาพ/อินโฟกราฟิกสรุปภาพรวมบทที่ 1
+           ใช้ทำไม: เปรียบเทียบทารกครบกำหนด vs คลอดก่อนกำหนด + เส้นเวลาพัฒนาการดูด-กลืน-หายใจ
+           ตำแหน่ง: ใต้หัวข้อบทที่ 1 ก่อนเนื้อหาข้อความ
+      -->
+      <div class="poster-slot" id="ch1-poster" data-caption="ภาพสรุปบทที่ 1: ความสำคัญของการดูดกลืน">
+        <span class="poster-slot-label">[POSTER: ch1-poster - รอใส่ภาพ]</span>
+        <p>เปรียบเทียบทารกครบกำหนด vs ทารกคลอดก่อนกำหนด และเส้นเวลาพัฒนาการ suck-swallow-breathe (28 ถึง 32-34 สัปดาห์)</p>
+      </div>
+
+      <article class="content-card">
+        <h3>เด็กพรีเทอมคืออะไร</h3>
+        <p>เด็กพรีเทอม หรือทารกคลอดก่อนกำหนด หมายถึงทารกที่คลอดก่อนอายุครรภ์ครบ 37 สัปดาห์ ตามนิยามของ WHO</p>
+      </article>
+      <article class="content-card">
+        <h3>ทำไมต้องกระตุ้น</h3>
+        <p>รีเฟล็กซ์การดูดเริ่มตั้งแต่ประมาณ 28-32 สัปดาห์ แต่การประสาน "ดูด-กลืน-หายใจ" จะสมบูรณ์มากขึ้นเมื่อประมาณ 32-34 สัปดาห์เท่านั้น</p>
+      </article>
+      <article class="content-card">
+        <h3>ผลกระทบถ้าดูดกลืนไม่ได้</h3>
+        <ul>
+          <li>เกิด feeding intolerance หรือกินนมทางปากได้ไม่ดี</li>
+          <li>เสี่ยงต่อการสำลัก</li>
+          <li>อาจต้องนอนโรงพยาบาลนานขึ้น</li>
+        </ul>
+      </article>
+      <article class="content-card caution">
+        <h3>การนวดกระตุ้นช่วยอะไร</h3>
+        <p>การนวดกระตุ้นช่องปากช่วยลดเวลาการเปลี่ยนผ่านสู่การกินนมทางปากและระยะเวลานอนโรงพยาบาลได้</p>
+      </article>
+
+      <div class="page-nav">
+        <button class="secondary-btn" type="button" data-page-target="home">หน้าแรก</button>
+        <button class="primary-btn" type="button" data-page-target="ch2">บทถัดไป</button>
+      </div>
+    </section>
+
+    <section class="page" id="page-ch2" data-page="ch2">
+      <header class="chapter-hero apricot">
+        <span>บทที่ 2</span>
+        <h2>เกณฑ์ความพร้อมของทารก</h2>
+        <p>เช็คทีละข้อก่อนเริ่มกระตุ้น เพื่อให้การฝึกสอดคล้องกับสภาพทารกในขณะนั้น</p>
+      </header>
+
+      <!-- [POSTER SLOT] id=ch2-poster
+           คือ: อินโฟกราฟิกสรุป 4 เกณฑ์ความพร้อมแบบเช็คลิสต์
+           ใช้ทำไม: ให้ผู้เรียนใช้เป็นใบเช็คก่อนเริ่มกระตุ้น หน้าเดียวจบ
+           ตำแหน่ง: บนสุดของบทที่ 2 ก่อนรายละเอียดทั้ง 4 ข้อ
+      -->
+      <div class="poster-slot compact" id="ch2-poster" data-caption="ภาพสรุปบทที่ 2: เกณฑ์ความพร้อม 4 ข้อ">
+        <span class="poster-slot-label">[POSTER: ch2-poster - รอใส่ภาพ]</span>
+        <p>สรุปก่อนเริ่มกระตุ้นทุกครั้ง: เช็คครบทั้ง 4 ข้อ ถ้าผ่านครบจึงเริ่มบทที่ 4 ได้ ถ้าข้อใดข้อหนึ่งยังไม่ผ่าน ให้รอหรือปรึกษาทีมดูแลก่อนเสมอ</p>
+      </div>
+
+      <article class="content-card">
+        <h3>1. ความคงที่ทางสรีรวิทยา</h3>
+        <p>เช็คสัญญาณชีพก่อนเริ่มทุกครั้ง</p>
+        <ul>
+          <li>อัตราการเต้นของหัวใจ: 120-170 ครั้ง/นาที</li>
+          <li>อัตราการหายใจ: 40-70 ครั้ง/นาที หายใจสม่ำเสมอ ไม่มีอกบุ๋ม จมูกบาน หรือหายใจเสียงดัง</li>
+          <li>ค่าออกซิเจนในเลือด (SpO2): 90-95%</li>
+          <li>ไม่มีภาวะหยุดหายใจ (apnea) หรือหัวใจเต้นช้า (bradycardia) ในช่วงเวลาใกล้ ๆ ก่อนหน้า</li>
+          <li>ถ้าพบค่าใดนอกช่วงที่กำหนด ให้เลื่อนการกระตุ้นออกไปก่อน และแจ้งพยาบาลหรือทีมที่ดูแล</li>
+        </ul>
+        <p class="source-note">ที่มาตัวเลข: Harriet Lane Handbook, 22nd Edition และช่วง SpO2 จากเป้าหมายที่ใช้บ่อยใน NICU ยุโรป หมายเหตุ: แต่ละหน่วยงานอาจตั้งเป้าหมายต่างกัน ควรยึด protocol ของหน่วยงานเป็นหลัก</p>
+      </article>
+
+      <article class="content-card">
+        <h3>2. ระดับความตื่นตัว</h3>
+        <p>ทารกควรอยู่ในภาวะตื่นสงบ (quiet alert) สังเกตได้จากลืมตา สนใจสิ่งรอบตัว ตัวผ่อนคลาย ไม่ร้องกวน ไม่เกร็ง และไม่ใช่ช่วงหลับลึก</p>
+        <p>ถ้าทารกหลับอยู่ให้รอให้ตื่นเองตามธรรมชาติ ไม่ควรปลุก ถ้ากำลังร้องกวนให้ปลอบให้สงบก่อน แล้วค่อยเริ่มกระตุ้น</p>
+      </article>
+
+      <article class="content-card">
+        <h3>3. การมีรีเฟล็กซ์พื้นฐาน</h3>
+        <ul>
+          <li>Rooting reflex: สัมผัสมุมปากเบา ๆ แล้วดูว่าทารกหันหน้าเข้าหาสิ่งที่มาสัมผัสหรือไม่</li>
+          <li>Sucking reflex: ให้จุกนมหลอกแตะริมฝีปาก แล้วดูว่ามีการอ้าปากหรือดูดตอบสนองหรือไม่</li>
+        </ul>
+        <p>ถ้าไม่พบรีเฟล็กซ์ทั้งสองอย่างเลย อาจแสดงว่าระบบประสาทของทารกยังไม่พร้อม ควรปรึกษาทีมดูแลก่อนกระตุ้นต่อ</p>
+      </article>
+
+      <article class="content-card">
+        <h3>4. จังหวะเวลาที่เหมาะสม</h3>
+        <ul>
+          <li>ควรกระตุ้นก่อนมื้อนมถัดไป 15-30 นาที</li>
+          <li>ห้ามกระตุ้นทันทีหลังให้นมหรือให้อาหารทางสาย ภายใน 30 นาทีหลังกินนม เพราะเสี่ยงต่อการแหวะนมหรือสำรอก</li>
+        </ul>
+      </article>
+
+      <div class="page-nav">
+        <button class="secondary-btn" type="button" data-page-target="ch1">บทก่อนหน้า</button>
+        <button class="primary-btn" type="button" data-page-target="ch3">บทถัดไป</button>
+      </div>
+    </section>
+
+    <section class="page" id="page-ch3" data-page="ch3">
+      <header class="chapter-hero mint">
+        <span>บทที่ 3</span>
+        <h2>การเตรียมอุปกรณ์</h2>
+        <p>เตรียมอุปกรณ์และสภาพแวดล้อมให้พร้อมก่อนสัมผัสทารกทุกครั้ง</p>
+      </header>
+
+      <!-- [POSTER SLOT] id=ch3-poster
+           คือ: ภาพรวมอุปกรณ์ทั้งหมดจัดวางเป็นชุด พร้อมป้ายชื่อกำกับ
+           ใช้ทำไม: ให้ผู้เรียนเห็นภาพรวมอุปกรณ์ทั้งหมดในภาพเดียวก่อนอ่านรายละเอียด
+           ตำแหน่ง: หัวบทที่ 3 ก่อนรายการอุปกรณ์แบบข้อความ
+      -->
+      <div class="poster-slot" id="ch3-poster" data-caption="ภาพสรุปบทที่ 3: อุปกรณ์ที่ต้องเตรียม">
+        <span class="poster-slot-label">[POSTER: ch3-poster - รอใส่ภาพ]</span>
+        <p>ภาพรวมอุปกรณ์แบบ flat-lay พร้อมป้ายชื่อแต่ละชิ้น</p>
+      </div>
+
+      <article class="content-card">
+        <h3>รายการอุปกรณ์</h3>
+        <ul>
+          <li>การล้างมือด้วยเทคนิค 7 ขั้นตอนก่อนสัมผัสตัวทารกทุกครั้ง</li>
+          <li>ถุงมือสะอาดหรือปลอดเชื้อ</li>
+          <li>จุกนมหลอกสำหรับดูด ใช้เฉพาะรายทารก</li>
+          <li>ผ้าหรือที่รองจัดท่าทารกให้สบาย</li>
+          <li>นาฬิกาหรือตัวจับเวลา</li>
+          <li>พื้นที่เงียบ สงบ แสงไม่จ้าเกินไป</li>
+        </ul>
+      </article>
+
+      <div class="page-nav">
+        <button class="secondary-btn" type="button" data-page-target="ch2">บทก่อนหน้า</button>
+        <button class="primary-btn" type="button" data-page-target="ch4">บทถัดไป</button>
+      </div>
+    </section>
+
+    <section class="page" id="page-ch4" data-page="ch4">
+      <header class="chapter-hero lavender">
+        <span>บทที่ 4</span>
+        <h2>ท่ากระตุ้นการดูดกลืน</h2>
+        <p>โปรแกรมตามแนวทาง Fucile, Gisel และ Lau (2002) ร่วมกับ Rocha et al. (2007)</p>
+      </header>
+
+      <!-- [POSTER SLOT] id=ch4-intro-poster
+           คือ: ภาพสรุปโครงสร้างโปรแกรมทั้งหมด
+           ใช้ทำไม: แสดงเส้นเวลา 15 นาที แบ่งเป็น 8 ขั้นตอนนวด 12 นาที + NNS 3 นาที
+           ตำแหน่ง: ช่วงเกริ่นนำก่อนเข้ารายการ 9 ขั้นตอน
+      -->
+      <div class="poster-slot" id="ch4-intro-poster" data-caption="ภาพสรุปบทที่ 4: โปรแกรม 15 นาที">
+        <span class="poster-slot-label">[POSTER: ch4-intro-poster - รอใส่ภาพ]</span>
+        <p>เส้นเวลา 15 นาที แบ่งเป็น 8 ขั้นตอนนวด 12 นาที และ NNS 3 นาที</p>
+      </div>
+
+      <article class="content-card">
+        <h3>ภาพรวมโปรแกรม</h3>
+        <p>โปรแกรมกระตุ้นการดูดกลืนตามแนวทางของ Fucile, Gisel และ Lau (2002) ประกอบด้วยการนวดกระตุ้นด้วยนิ้วอย่างเป็นระบบ 12 นาที ตามด้วยการดูดจุกนมหลอก 3 นาที รวม 15 นาที ทำวันละ 1 ครั้ง ก่อนมื้อนม 15-30 นาที ต่อเนื่องอย่างน้อย 10 วัน สอดคล้องกับ Rocha et al. (2007)</p>
+      </article>
+
+      <div class="step-list" aria-label="รายการท่าบทที่ 4">
+        <button class="step-link" type="button" data-page-target="step1"><span>ท่าที่ 1</span><strong>การนวดแก้ม (รูปตัว C)</strong><small>2 นาที</small></button>
+        <button class="step-link" type="button" data-page-target="step2"><span>ท่าที่ 2</span><strong>การนวดริมฝีปากบน-ล่าง</strong><small>1 นาที</small></button>
+        <button class="step-link" type="button" data-page-target="step3"><span>ท่าที่ 3</span><strong>การนวดรอบปาก</strong><small>1 นาที</small></button>
+        <button class="step-link" type="button" data-page-target="step4"><span>ท่าที่ 4</span><strong>การนวดเหงือกบน-ล่าง</strong><small>1 นาที</small></button>
+        <button class="step-link" type="button" data-page-target="step5"><span>ท่าที่ 5</span><strong>การนวดแก้มด้านใน</strong><small>2 นาที</small></button>
+        <button class="step-link" type="button" data-page-target="step6"><span>ท่าที่ 6</span><strong>การนวดขอบลิ้นด้านข้าง</strong><small>1 นาที</small></button>
+        <button class="step-link" type="button" data-page-target="step7"><span>ท่าที่ 7</span><strong>การนวดตรงกลางแผ่นลิ้น/เพดานแข็ง</strong><small>1 นาที</small></button>
+        <button class="step-link" type="button" data-page-target="step8"><span>ท่าที่ 8</span><strong>กระตุ้นการดูด (ลูบเพดานปาก)</strong><small>1 นาที</small></button>
+        <button class="step-link" type="button" data-page-target="step9"><span>ท่าที่ 9</span><strong>ดูดจุกนมหลอก (NNS)</strong><small>3 นาที</small></button>
+      </div>
+
+      <div class="page-nav">
+        <button class="secondary-btn" type="button" data-page-target="ch3">บทก่อนหน้า</button>
+        <button class="primary-btn" type="button" data-page-target="step1">เริ่มท่าที่ 1</button>
+      </div>
+    </section>
+
+    <section class="page" id="page-step1" data-page="step1">
+      <header class="step-hero">
+        <span>บทที่ 4 · ท่าที่ 1</span>
+        <h2>การนวดแก้ม (รูปตัว C)</h2>
+        <p>ระยะเวลา 2 นาที</p>
+      </header>
+      <article class="step-card">
+        <!-- [IMAGE SLOT] id=ch4-step1-image
+             คือ: ภาพนิ่งแสดงตำแหน่ง/ทิศทางการนวดแก้ม (ท่าที่ 1)
+             ใช้ทำไม: ให้ผู้เรียนหยุดดูตำแหน่งนิ้วที่ถูกต้องแบบนิ่ง ๆ
+        -->
+        <div class="image-slot" id="ch4-step1-image">
+          <span class="image-slot-label">[IMAGE: ch4-step1-image - รอใส่ภาพ]</span>
+        </div>
+        <!-- [VIDEO SLOT] id=ch4-step1-video
+             คือ: คลิปสาธิตการนวดแก้มจริง (ท่าที่ 1)
+             ใช้ทำไม: กดไอคอน play แล้วเปิด modal popup เล่นวิดีโอสาธิตแบบเคลื่อนไหว
+             พฤติกรรม: กด icon -> เปิด modal เต็มจอ (mobile) พร้อมปุ่มปิด, ยังไม่มีไฟล์วิดีโอจริงให้ใส่ video src ภายหลัง
+        -->
+        <button class="video-icon-btn" type="button" data-video-target="ch4-step1-video" aria-label="เล่นวิดีโอสาธิตท่าที่ 1"><i class="ti ti-player-play"></i></button>
+        <h3>คำอธิบาย</h3>
+        <p>โดยวางนิ้วชี้บริเวณฐานจมูก ออกแรงกดแล้วเคลื่อนนิ้วไปทางใบหู แล้วเลื่อนลงมาทางมุมปากเป็นรูปตัวอักษร "C" ทำซ้ำ 4 ครั้ง ใช้เวลา 2 นาที</p>
+      </article>
+      <div class="page-nav"><button class="secondary-btn" type="button" data-page-target="ch4">กลับบทที่ 4</button><button class="primary-btn" type="button" data-page-target="step2">ท่าถัดไป</button></div>
+    </section>
+
+    <section class="page" id="page-step2" data-page="step2">
+      <header class="step-hero">
+        <span>บทที่ 4 · ท่าที่ 2</span>
+        <h2>การนวดริมฝีปากบน-ล่าง</h2>
+        <p>ระยะเวลา 1 นาที</p>
+      </header>
+      <article class="step-card">
+        <!-- [IMAGE SLOT] id=ch4-step2-image
+             คือ: ภาพนิ่งแสดงตำแหน่ง/ทิศทางการนวดริมฝีปากบน-ล่าง (ท่าที่ 2)
+             ใช้ทำไม: ให้ผู้เรียนหยุดดูตำแหน่งนิ้วที่ถูกต้องแบบนิ่ง ๆ
+        -->
+        <div class="image-slot" id="ch4-step2-image"><span class="image-slot-label">[IMAGE: ch4-step2-image - รอใส่ภาพ]</span></div>
+        <!-- [VIDEO SLOT] id=ch4-step2-video
+             คือ: คลิปสาธิตการนวดริมฝีปากบน-ล่างจริง (ท่าที่ 2)
+             ใช้ทำไม: กดไอคอน play แล้วเปิด modal popup เล่นวิดีโอสาธิตแบบเคลื่อนไหว
+             พฤติกรรม: กด icon -> เปิด modal เต็มจอ (mobile) พร้อมปุ่มปิด, ยังไม่มีไฟล์วิดีโอจริงให้ใส่ video src ภายหลัง
+        -->
+        <button class="video-icon-btn" type="button" data-video-target="ch4-step2-video" aria-label="เล่นวิดีโอสาธิตท่าที่ 2"><i class="ti ti-player-play"></i></button>
+        <h3>คำอธิบาย</h3>
+        <p>โดยวางนิ้วชี้บริเวณมุมปากด้านบน ออกแรงกดเคลื่อนนิ้วแบบหมุนวน (Circular motion) จากมุมปากด้านซ้ายผ่านตรงกลาง หยุดที่มุมปากด้านขวา จากนั้นกลับทิศทางจากด้านขวาไปซ้าย ทำซ้ำ 4 ครั้ง ใช้เวลา 1 นาที</p>
+        <p>ริมฝีปากล่างทำเช่นเดียวกับริมฝีปากบน</p>
+      </article>
+      <div class="page-nav"><button class="secondary-btn" type="button" data-page-target="step1">ท่าก่อนหน้า</button><button class="primary-btn" type="button" data-page-target="step3">ท่าถัดไป</button></div>
+    </section>
+
+    <section class="page" id="page-step3" data-page="step3">
+      <header class="step-hero"><span>บทที่ 4 · ท่าที่ 3</span><h2>การนวดรอบปาก</h2><p>ระยะเวลา 1 นาที</p></header>
+      <article class="step-card">
+        <!-- [IMAGE SLOT] id=ch4-step3-image
+             คือ: ภาพนิ่งแสดงตำแหน่ง/ทิศทางการนวดรอบปาก (ท่าที่ 3)
+             ใช้ทำไม: ให้ผู้เรียนหยุดดูตำแหน่งนิ้วที่ถูกต้องแบบนิ่ง ๆ
+        -->
+        <div class="image-slot" id="ch4-step3-image"><span class="image-slot-label">[IMAGE: ch4-step3-image - รอใส่ภาพ]</span></div>
+        <!-- [VIDEO SLOT] id=ch4-step3-video
+             คือ: คลิปสาธิตการนวดรอบปากจริง (ท่าที่ 3)
+             ใช้ทำไม: กดไอคอน play แล้วเปิด modal popup เล่นวิดีโอสาธิตแบบเคลื่อนไหว
+             พฤติกรรม: กด icon -> เปิด modal เต็มจอ (mobile) พร้อมปุ่มปิด, ยังไม่มีไฟล์วิดีโอจริงให้ใส่ video src ภายหลัง
+        -->
+        <button class="video-icon-btn" type="button" data-video-target="ch4-step3-video" aria-label="เล่นวิดีโอสาธิตท่าที่ 3"><i class="ti ti-player-play"></i></button>
+        <h3>คำอธิบาย</h3><p>โดยวางนิ้วชี้จากกึ่งกลางรอบริมฝีปาก ออกแรงกดแล้วเคลื่อนไปถึงมุมปากทั้งด้านซ้ายและขวา ทำทั้งรอบริมฝีปากบนและล่าง ทำซ้ำ 2 ครั้ง ใช้เวลา 1 นาที</p>
+      </article>
+      <div class="page-nav"><button class="secondary-btn" type="button" data-page-target="step2">ท่าก่อนหน้า</button><button class="primary-btn" type="button" data-page-target="step4">ท่าถัดไป</button></div>
+    </section>
+
+    <section class="page" id="page-step4" data-page="step4">
+      <header class="step-hero"><span>บทที่ 4 · ท่าที่ 4</span><h2>การนวดเหงือกบน-ล่าง</h2><p>ระยะเวลา 1 นาที</p></header>
+      <article class="step-card">
+        <!-- [IMAGE SLOT] id=ch4-step4-image
+             คือ: ภาพนิ่งแสดงตำแหน่ง/ทิศทางการนวดเหงือกบน-ล่าง (ท่าที่ 4)
+             ใช้ทำไม: ให้ผู้เรียนหยุดดูตำแหน่งนิ้วที่ถูกต้องแบบนิ่ง ๆ
+        -->
+        <div class="image-slot" id="ch4-step4-image"><span class="image-slot-label">[IMAGE: ch4-step4-image - รอใส่ภาพ]</span></div>
+        <!-- [VIDEO SLOT] id=ch4-step4-video
+             คือ: คลิปสาธิตการนวดเหงือกบน-ล่างจริง (ท่าที่ 4)
+             ใช้ทำไม: กดไอคอน play แล้วเปิด modal popup เล่นวิดีโอสาธิตแบบเคลื่อนไหว
+             พฤติกรรม: กด icon -> เปิด modal เต็มจอ (mobile) พร้อมปุ่มปิด, ยังไม่มีไฟล์วิดีโอจริงให้ใส่ video src ภายหลัง
+        -->
+        <button class="video-icon-btn" type="button" data-video-target="ch4-step4-video" aria-label="เล่นวิดีโอสาธิตท่าที่ 4"><i class="ti ti-player-play"></i></button>
+        <h3>คำอธิบาย</h3><p>โดยวางนิ้วก้อยตรงกลางเหงือก กดเบา ๆ แล้วเคลื่อนนิ้วช้า ๆ เข้าไปด้านในปาก ลากนิ้วกลับมาตรงกลางเหงือกเหมือนเดิม</p><p>ทำเช่นเดียวกันทั้งด้านซ้ายและด้านขวา ทำซ้ำ 2 ครั้ง ใช้เวลา 1 นาที</p>
+      </article>
+      <div class="page-nav"><button class="secondary-btn" type="button" data-page-target="step3">ท่าก่อนหน้า</button><button class="primary-btn" type="button" data-page-target="step5">ท่าถัดไป</button></div>
+    </section>
+
+    <section class="page" id="page-step5" data-page="step5">
+      <header class="step-hero"><span>บทที่ 4 · ท่าที่ 5</span><h2>การนวดแก้มด้านใน</h2><p>ระยะเวลา 2 นาที</p></header>
+      <article class="step-card">
+        <!-- [IMAGE SLOT] id=ch4-step5-image
+             คือ: ภาพนิ่งแสดงตำแหน่ง/ทิศทางการนวดแก้มด้านใน (ท่าที่ 5)
+             ใช้ทำไม: ให้ผู้เรียนหยุดดูตำแหน่งนิ้วที่ถูกต้องแบบนิ่ง ๆ
+        -->
+        <div class="image-slot" id="ch4-step5-image"><span class="image-slot-label">[IMAGE: ch4-step5-image - รอใส่ภาพ]</span></div>
+        <!-- [VIDEO SLOT] id=ch4-step5-video
+             คือ: คลิปสาธิตการนวดแก้มด้านในจริง (ท่าที่ 5)
+             ใช้ทำไม: กดไอคอน play แล้วเปิด modal popup เล่นวิดีโอสาธิตแบบเคลื่อนไหว
+             พฤติกรรม: กด icon -> เปิด modal เต็มจอ (mobile) พร้อมปุ่มปิด, ยังไม่มีไฟล์วิดีโอจริงให้ใส่ video src ภายหลัง
+        -->
+        <button class="video-icon-btn" type="button" data-video-target="ch4-step5-video" aria-label="เล่นวิดีโอสาธิตท่าที่ 5"><i class="ti ti-player-play"></i></button>
+        <h3>คำอธิบาย</h3><p>โดยวางนิ้วก้อยที่มุมปากด้านใน กดและเคลื่อนนิ้วเข้าไปด้านในถึงกราม แล้วเคลื่อนนิ้วกลับ</p><p>ทำเช่นเดียวกันทั้งด้านซ้ายและด้านขวา ทำซ้ำ 2 ครั้ง ใช้เวลา 2 นาที</p>
+      </article>
+      <div class="page-nav"><button class="secondary-btn" type="button" data-page-target="step4">ท่าก่อนหน้า</button><button class="primary-btn" type="button" data-page-target="step6">ท่าถัดไป</button></div>
+    </section>
+
+    <section class="page" id="page-step6" data-page="step6">
+      <header class="step-hero"><span>บทที่ 4 · ท่าที่ 6</span><h2>การนวดขอบลิ้นด้านข้าง</h2><p>ระยะเวลา 1 นาที</p></header>
+      <article class="step-card">
+        <!-- [IMAGE SLOT] id=ch4-step6-image
+             คือ: ภาพนิ่งแสดงตำแหน่ง/ทิศทางการนวดขอบลิ้นด้านข้าง (ท่าที่ 6)
+             ใช้ทำไม: ให้ผู้เรียนหยุดดูตำแหน่งนิ้วที่ถูกต้องแบบนิ่ง ๆ
+        -->
+        <div class="image-slot" id="ch4-step6-image"><span class="image-slot-label">[IMAGE: ch4-step6-image - รอใส่ภาพ]</span></div>
+        <!-- [VIDEO SLOT] id=ch4-step6-video
+             คือ: คลิปสาธิตการนวดขอบลิ้นด้านข้างจริง (ท่าที่ 6)
+             ใช้ทำไม: กดไอคอน play แล้วเปิด modal popup เล่นวิดีโอสาธิตแบบเคลื่อนไหว
+             พฤติกรรม: กด icon -> เปิด modal เต็มจอ (mobile) พร้อมปุ่มปิด, ยังไม่มีไฟล์วิดีโอจริงให้ใส่ video src ภายหลัง
+        -->
+        <button class="video-icon-btn" type="button" data-video-target="ch4-step6-video" aria-label="เล่นวิดีโอสาธิตท่าที่ 6"><i class="ti ti-player-play"></i></button>
+        <h3>คำอธิบาย</h3><p>โดยวางนิ้วก้อยที่กรามระหว่างขอบลิ้นกับเหงือกล่าง เคลื่อนนิ้วมาตรงกลางและดันลิ้นไปด้านตรงข้าม จากนั้นเลื่อนไปที่กระพุ้งแก้มแล้วกดกระพุ้งแก้ม</p><p>ทำเช่นเดียวกันทั้งด้านซ้ายและด้านขวา ทำซ้ำ 2 ครั้ง ใช้เวลา 1 นาที</p>
+      </article>
+      <div class="page-nav"><button class="secondary-btn" type="button" data-page-target="step5">ท่าก่อนหน้า</button><button class="primary-btn" type="button" data-page-target="step7">ท่าถัดไป</button></div>
+    </section>
+
+    <section class="page" id="page-step7" data-page="step7">
+      <header class="step-hero"><span>บทที่ 4 · ท่าที่ 7</span><h2>การนวดตรงกลางแผ่นลิ้น/เพดานแข็ง</h2><p>ระยะเวลา 1 นาที</p></header>
+      <article class="step-card">
+        <!-- [IMAGE SLOT] id=ch4-step7-image
+             คือ: ภาพนิ่งแสดงตำแหน่ง/ทิศทางการนวดตรงกลางแผ่นลิ้น/เพดานแข็ง (ท่าที่ 7)
+             ใช้ทำไม: ให้ผู้เรียนหยุดดูตำแหน่งนิ้วที่ถูกต้องแบบนิ่ง ๆ
+        -->
+        <div class="image-slot" id="ch4-step7-image"><span class="image-slot-label">[IMAGE: ch4-step7-image - รอใส่ภาพ]</span></div>
+        <!-- [VIDEO SLOT] id=ch4-step7-video
+             คือ: คลิปสาธิตการนวดตรงกลางแผ่นลิ้น/เพดานแข็งจริง (ท่าที่ 7)
+             ใช้ทำไม: กดไอคอน play แล้วเปิด modal popup เล่นวิดีโอสาธิตแบบเคลื่อนไหว
+             พฤติกรรม: กด icon -> เปิด modal เต็มจอ (mobile) พร้อมปุ่มปิด, ยังไม่มีไฟล์วิดีโอจริงให้ใส่ video src ภายหลัง
+        -->
+        <button class="video-icon-btn" type="button" data-video-target="ch4-step7-video" aria-label="เล่นวิดีโอสาธิตท่าที่ 7"><i class="ti ti-player-play"></i></button>
+        <h3>คำอธิบาย</h3><p>โดยวางนิ้วชี้ตรงกลางปาก กดเพดานแข็งค้างไว้ 3 วินาที แล้วเคลื่อนนิ้วลงมาแตะกลางลิ้นและกดลง จากนั้นเคลื่อนนิ้วกลับไปแตะเพดานแข็งทันที</p><p>ทำซ้ำ 4 ครั้ง ใช้เวลา 1 นาที</p>
+      </article>
+      <div class="page-nav"><button class="secondary-btn" type="button" data-page-target="step6">ท่าก่อนหน้า</button><button class="primary-btn" type="button" data-page-target="step8">ท่าถัดไป</button></div>
+    </section>
+
+    <section class="page" id="page-step8" data-page="step8">
+      <header class="step-hero"><span>บทที่ 4 · ท่าที่ 8</span><h2>กระตุ้นการดูด (ลูบเพดานปาก)</h2><p>ระยะเวลา 1 นาที</p></header>
+      <article class="step-card">
+        <!-- [IMAGE SLOT] id=ch4-step8-image
+             คือ: ภาพนิ่งแสดงตำแหน่ง/ทิศทางการลูบเพดานปากเพื่อกระตุ้นการดูด (ท่าที่ 8)
+             ใช้ทำไม: ให้ผู้เรียนหยุดดูตำแหน่งนิ้วที่ถูกต้องแบบนิ่ง ๆ
+        -->
+        <div class="image-slot" id="ch4-step8-image"><span class="image-slot-label">[IMAGE: ch4-step8-image - รอใส่ภาพ]</span></div>
+        <!-- [VIDEO SLOT] id=ch4-step8-video
+             คือ: คลิปสาธิตการลูบเพดานปากเพื่อกระตุ้นการดูดจริง (ท่าที่ 8)
+             ใช้ทำไม: กดไอคอน play แล้วเปิด modal popup เล่นวิดีโอสาธิตแบบเคลื่อนไหว
+             พฤติกรรม: กด icon -> เปิด modal เต็มจอ (mobile) พร้อมปุ่มปิด, ยังไม่มีไฟล์วิดีโอจริงให้ใส่ video src ภายหลัง
+        -->
+        <button class="video-icon-btn" type="button" data-video-target="ch4-step8-video" aria-label="เล่นวิดีโอสาธิตท่าที่ 8"><i class="ti ti-player-play"></i></button>
+        <h3>คำอธิบาย</h3><p>โดยวางนิ้วก้อยที่เพดานปากแล้วลูบเบา ๆ เพื่อกระตุ้นการดูด</p><p>ใช้เวลา 1 นาที</p>
+      </article>
+      <div class="page-nav"><button class="secondary-btn" type="button" data-page-target="step7">ท่าก่อนหน้า</button><button class="primary-btn" type="button" data-page-target="step9">ท่าถัดไป</button></div>
+    </section>
+
+    <section class="page" id="page-step9" data-page="step9">
+      <header class="step-hero"><span>บทที่ 4 · ท่าที่ 9</span><h2>ดูดจุกนมหลอก (NNS)</h2><p>ระยะเวลา 3 นาที</p></header>
+      <article class="step-card">
+        <!-- [IMAGE SLOT] id=ch4-step9-image
+             คือ: ภาพนิ่งแสดงการดูดจุกนมหลอกแบบ non-nutritive sucking (ท่าที่ 9)
+             ใช้ทำไม: ให้ผู้เรียนเห็นตำแหน่งและการประคองที่ถูกต้องแบบนิ่ง ๆ
+        -->
+        <div class="image-slot" id="ch4-step9-image"><span class="image-slot-label">[IMAGE: ch4-step9-image - รอใส่ภาพ]</span></div>
+        <!-- [VIDEO SLOT] id=ch4-step9-video
+             คือ: คลิปสาธิตการดูดจุกนมหลอกจริง (ท่าที่ 9)
+             ใช้ทำไม: กดไอคอน play แล้วเปิด modal popup เล่นวิดีโอสาธิตแบบเคลื่อนไหว
+             พฤติกรรม: กด icon -> เปิด modal เต็มจอ (mobile) พร้อมปุ่มปิด, ยังไม่มีไฟล์วิดีโอจริงให้ใส่ video src ภายหลัง
+        -->
+        <button class="video-icon-btn" type="button" data-video-target="ch4-step9-video" aria-label="เล่นวิดีโอสาธิตท่าที่ 9"><i class="ti ti-player-play"></i></button>
+        <h3>คำอธิบาย</h3><p>ให้ทารกดูดจุกนมปลอม 3 นาที</p>
+      </article>
+      <div class="page-nav"><button class="secondary-btn" type="button" data-page-target="step8">ท่าก่อนหน้า</button><button class="primary-btn" type="button" data-page-target="ch5">ไป Post-test</button></div>
+    </section>
+
+    <section class="page" id="page-ch5" data-page="ch5">
+      <header class="chapter-hero plain">
+        <span>บทที่ 5</span>
+        <h2>Post-test</h2>
+        <p>แบบทดสอบหลังเรียน 5 ข้อ ข้อละ 3 ตัวเลือก</p>
+      </header>
+      <form class="quiz-form" data-quiz>
+        <fieldset class="quiz-card">
+          <legend>1. ทารกคลอดก่อนกำหนด หมายถึงข้อใด</legend>
+          <label><input type="radio" name="q1" value="a"> คลอดก่อนอายุครรภ์ครบ 37 สัปดาห์</label>
+          <label><input type="radio" name="q1" value="b"> คลอดหลังอายุครรภ์ครบ 40 สัปดาห์</label>
+          <label><input type="radio" name="q1" value="c"> น้ำหนักแรกเกิดมากกว่า 3,000 กรัม</label>
+        </fieldset>
+
+        <fieldset class="quiz-card">
+          <legend>2. การประสานดูด-กลืน-หายใจมักสมบูรณ์มากขึ้นช่วงใด</legend>
+          <label><input type="radio" name="q2" value="a"> 24-26 สัปดาห์</label>
+          <label><input type="radio" name="q2" value="b"> 32-34 สัปดาห์</label>
+          <label><input type="radio" name="q2" value="c"> หลัง 42 สัปดาห์เท่านั้น</label>
+        </fieldset>
+
+        <fieldset class="quiz-card">
+          <legend>3. ก่อนเริ่มกระตุ้นควรเช็คเรื่องใดเป็นอันดับสำคัญ</legend>
+          <label><input type="radio" name="q3" value="a"> สีของผ้าห่อตัว</label>
+          <label><input type="radio" name="q3" value="b"> ความคงที่ของสัญญาณชีพและอาการหายใจ</label>
+          <label><input type="radio" name="q3" value="c"> จำนวนผู้เรียนที่อยู่ข้างเตียง</label>
+        </fieldset>
+
+        <fieldset class="quiz-card">
+          <legend>4. เวลาที่เหมาะสมในการกระตุ้นคือข้อใด</legend>
+          <label><input type="radio" name="q4" value="a"> ทันทีหลังให้นมเสร็จ</label>
+          <label><input type="radio" name="q4" value="b"> ก่อนมื้อนมถัดไป 15-30 นาที</label>
+          <label><input type="radio" name="q4" value="c"> ระหว่างทารกร้องกวนมาก</label>
+        </fieldset>
+
+        <fieldset class="quiz-card">
+          <legend>5. โปรแกรมบทที่ 4 ใช้เวลารวมกี่นาที</legend>
+          <label><input type="radio" name="q5" value="a"> 5 นาที</label>
+          <label><input type="radio" name="q5" value="b"> 10 นาที</label>
+          <label><input type="radio" name="q5" value="c"> 15 นาที</label>
+        </fieldset>
+
+        <div class="quiz-actions">
+          <button class="primary-btn" type="submit">ตรวจคำตอบ</button>
+          <button class="secondary-btn" type="button" data-reset-quiz>ทำใหม่</button>
+        </div>
+        <div class="quiz-result" data-quiz-result aria-live="polite"></div>
+      </form>
+      <div class="page-nav">
+        <button class="secondary-btn" type="button" data-page-target="step9">ท่าก่อนหน้า</button>
+        <button class="primary-btn" type="button" data-page-target="home">กลับบทเรียนทั้งหมด</button>
+      </div>
+    </section>
+
+    <!-- [VIDEO MODAL] popup กลางจอสำหรับเล่นวิดีโอทุกท่าในบทที่ 4
+         เปิดเมื่อกด .video-icon-btn ใด ๆ, ปิดด้วยปุ่ม X หรือกดพื้นหลังมืดรอบนอก
+         <video> ยังไม่มี src จริง ใส่ comment กำกับว่ารอไฟล์วิดีโอของแต่ละ step มาแทนที่
+    -->
+    <div class="video-modal" id="videoModal" hidden>
+      <div class="video-modal-backdrop" data-close-video></div>
+      <div class="video-modal-content" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+        <button class="video-modal-close" type="button" data-close-video aria-label="ปิดวิดีโอ"><i class="ti ti-x"></i></button>
+        <p class="modal-eyebrow">วิดีโอสาธิต</p>
+        <h2 id="videoModalTitle">รอใส่วิดีโอ</h2>
+        <!-- src ว่าง รอไฟล์จริงตาม step ที่เลือก -->
+        <video id="videoModalPlayer" controls></video>
+        <p class="modal-note">ไฟล์วิดีโอจริงจะใช้ path รูปแบบ videos/ch4-stepX-video.mp4</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
