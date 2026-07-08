@@ -517,8 +517,7 @@ h1 {
   min-height: 0;
 }
 
-.poster-slot-label,
-.image-slot-label {
+.poster-slot-label {
   display: inline-block;
   padding: 5px 10px;
   border-radius: 8px;
@@ -585,12 +584,17 @@ h1 {
 }
 
 .image-slot {
-  min-height: 245px;
   margin-bottom: 15px;
-  display: grid;
-  place-items: center;
-  border: 2px dashed #d5c8d9;
-  background: linear-gradient(135deg, #f6f1fb, #fffaf6);
+  overflow: hidden;
+  border: 1px solid rgba(213, 200, 217, .72);
+  background: var(--card);
+}
+
+.image-slot img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .video-icon-btn {
