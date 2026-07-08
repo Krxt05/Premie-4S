@@ -506,21 +506,15 @@ h1 {
 }
 
 .poster-slot {
-  min-height: 210px;
   margin-bottom: 14px;
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  text-align: center;
-  border: 2px dashed #d7c5b6;
-  background: #f7efe8;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(215, 197, 182, .72);
+  background: var(--card);
 }
 
 .poster-slot.compact {
-  min-height: 160px;
+  min-height: 0;
 }
 
 .poster-slot-label,
@@ -540,6 +534,13 @@ h1 {
   margin: 0;
   color: var(--muted);
   font-size: 12px;
+}
+
+.poster-slot img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .step-list {
