@@ -14,6 +14,10 @@
     "ch4-step8-video": "ท่าที่ 8: กระตุ้นการดูด (ลูบเพดานปาก)",
     "ch4-step9-video": "ท่าที่ 9: ดูดจุกนมหลอก (NNS)"
   };
+  const availableVideos = new Set([
+    "ch4-step1-video",
+    "ch4-step9-video"
+  ]);
 
   function showPage(pageName, pushHistory) {
     const nextPage = document.querySelector(`[data-page="${pageName}"]`);
@@ -56,7 +60,9 @@
     modalTitle.textContent = pageTitles[target] || "วิดีโอสาธิต";
     modalPlayer.setAttribute("src", source);
     modal.hidden = false;
-    console.info(`ยังไม่มีไฟล์วิดีโอ: ${source}`);
+    if (!availableVideos.has(target)) {
+      console.info(`ยังไม่มีไฟล์วิดีโอ: ${source}`);
+    }
   }
 
   function closeVideo() {
