@@ -16,6 +16,11 @@
   };
   const availableVideos = new Set([
     "ch4-step1-video",
+    "ch4-step2-video",
+    "ch4-step3-video",
+    "ch4-step6-video",
+    "ch4-step7-video",
+    "ch4-step8-video",
     "ch4-step9-video"
   ]);
 
