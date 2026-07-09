@@ -774,9 +774,14 @@ h1 {
 }
 
 .video-modal video {
-  width: 100%;
+  width: min(100%, 300px);
+  max-height: 68vh;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 14px;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 9 / 16;
+  display: block;
+  object-fit: contain;
   border-radius: 14px;
   background: #e7ddd4;
 }
