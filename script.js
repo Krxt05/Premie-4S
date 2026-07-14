@@ -1,5 +1,7 @@
 (function () {
   const pages = Array.from(document.querySelectorAll(".page"));
+  const appFrame = document.querySelector(".app-frame");
+  const chapterJumpButtons = Array.from(document.querySelectorAll("[data-jump-chapter]"));
   const historyStack = ["home"];
   let currentPage = "home";
 
@@ -38,8 +40,25 @@
       historyStack.push(pageName);
     }
 
+    updateChapterJump(pageName);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
+
+  function chapterForPage(pageName) {
+    if (pageName.startsWith("step")) return "ch4";
+    if (/^ch[1-5]$/.test(pageName)) return pageName;
+    return null;
+  }
+
+  function updateChapterJump(pageName) {
+    const activeChapter = chapterForPage(pageName);
+    appFrame?.classList.toggle("show-chapter-jump", Boolean(activeChapter));
+    chapterJumpButtons.forEach((button) => {
+      button.classList.toggle("active", button.dataset.jumpChapter === activeChapter);
+    });
+  }
+
+  updateChapterJump(currentPage);
 
   document.addEventListener("click", (event) => {
     const pageButton = event.target.closest("[data-page-target]");

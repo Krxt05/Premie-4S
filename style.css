@@ -98,6 +98,7 @@ button {
 
 .round-btn,
 .toc-btn,
+.chapter-jump-nav button,
 .primary-btn,
 .secondary-btn,
 .video-icon-btn,
@@ -125,6 +126,36 @@ button {
   color: var(--ink);
   font-size: 13px;
   font-weight: 600;
+}
+
+.chapter-jump-nav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+}
+
+.app-frame.show-chapter-jump .chapter-jump-nav {
+  display: flex;
+}
+
+.chapter-jump-nav button {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #f1ebe4;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.chapter-jump-nav button.active {
+  background: var(--ink);
+  color: #fff;
 }
 
 .page {
