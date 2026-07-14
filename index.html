@@ -131,45 +131,100 @@
         <img src="./assets/posters/ch2-poster.png" alt="ภาพสรุปบทที่ 2 เกณฑ์ความพร้อมของทารก">
       </div>
 
-      <article class="content-card">
-        <h3>1. ความคงที่ทางสรีรวิทยา</h3>
-        <p>เช็คสัญญาณชีพก่อนเริ่มทุกครั้ง</p>
-        <ul>
-          <li>อัตราการเต้นของหัวใจ: 120-170 ครั้ง/นาที</li>
-          <li>อัตราการหายใจ: 40-70 ครั้ง/นาที หายใจสม่ำเสมอ ไม่มีอกบุ๋ม จมูกบาน หรือหายใจเสียงดัง</li>
-          <li>ค่าออกซิเจนในเลือด (SpO2): 90-95%</li>
-          <li>ไม่มีภาวะหยุดหายใจ (apnea) หรือหัวใจเต้นช้า (bradycardia) ในช่วงเวลาใกล้ ๆ ก่อนหน้า</li>
-          <li>ถ้าพบค่าใดนอกช่วงที่กำหนด ให้เลื่อนการกระตุ้นออกไปก่อน และแจ้งพยาบาลหรือทีมที่ดูแล</li>
-        </ul>
-        <p class="source-note">ที่มาตัวเลข: Harriet Lane Handbook, 22nd Edition และช่วง SpO2 จากเป้าหมายที่ใช้บ่อยใน NICU ยุโรป หมายเหตุ: แต่ละหน่วยงานอาจตั้งเป้าหมายต่างกัน ควรยึด protocol ของหน่วยงานเป็นหลัก</p>
-      </article>
-
-      <article class="content-card">
-        <h3>2. ระดับความตื่นตัว</h3>
-        <p>ทารกควรอยู่ในภาวะตื่นสงบ (quiet alert) สังเกตได้จากลืมตา สนใจสิ่งรอบตัว ตัวผ่อนคลาย ไม่ร้องกวน ไม่เกร็ง และไม่ใช่ช่วงหลับลึก</p>
-        <p>ถ้าทารกหลับอยู่ให้รอให้ตื่นเองตามธรรมชาติ ไม่ควรปลุก ถ้ากำลังร้องกวนให้ปลอบให้สงบก่อน แล้วค่อยเริ่มกระตุ้น</p>
-      </article>
-
-      <article class="content-card">
-        <h3>3. การมีรีเฟล็กซ์พื้นฐาน</h3>
-        <ul>
-          <li>Rooting reflex: สัมผัสมุมปากเบา ๆ แล้วดูว่าทารกหันหน้าเข้าหาสิ่งที่มาสัมผัสหรือไม่</li>
-          <li>Sucking reflex: ให้จุกนมหลอกแตะริมฝีปาก แล้วดูว่ามีการอ้าปากหรือดูดตอบสนองหรือไม่</li>
-        </ul>
-        <p>ถ้าไม่พบรีเฟล็กซ์ทั้งสองอย่างเลย อาจแสดงว่าระบบประสาทของทารกยังไม่พร้อม ควรปรึกษาทีมดูแลก่อนกระตุ้นต่อ</p>
-      </article>
-
-      <article class="content-card">
-        <h3>4. จังหวะเวลาที่เหมาะสม</h3>
-        <ul>
-          <li>ควรกระตุ้นก่อนมื้อนมถัดไป 15-30 นาที</li>
-          <li>ห้ามกระตุ้นทันทีหลังให้นมหรือให้อาหารทางสาย ภายใน 30 นาทีหลังกินนม เพราะเสี่ยงต่อการแหวะนมหรือสำรอก</li>
-        </ul>
-      </article>
+      <section class="reveal-list" aria-label="เกณฑ์ความพร้อมแบบกดดูทีละใบ">
+        <article class="reveal-card">
+          <button type="button" class="reveal-toggle">
+            <i class="ti ti-heartbeat" aria-hidden="true"></i>
+            <span>1. ความคงที่ทางสรีรวิทยา</span>
+            <i class="ti ti-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="reveal-content">
+            <p>เช็คสัญญาณชีพก่อนเริ่มทุกครั้ง</p>
+            <ul>
+              <li>HR 120-170 ครั้ง/นาที</li>
+              <li>RR 40-70 ครั้ง/นาที หายใจสม่ำเสมอ</li>
+              <li>SpO2 90-95%</li>
+              <li>ไม่มี apnea หรือ bradycardia ในช่วงใกล้ ๆ ก่อนหน้า</li>
+            </ul>
+          </div>
+        </article>
+        <article class="reveal-card">
+          <button type="button" class="reveal-toggle">
+            <i class="ti ti-eye" aria-hidden="true"></i>
+            <span>2. ระดับความตื่นตัว</span>
+            <i class="ti ti-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="reveal-content">
+            <p>ควรอยู่ในภาวะตื่นสงบ ลืมตา ตัวผ่อนคลาย ไม่ร้องกวน และไม่ใช่ช่วงหลับลึก</p>
+          </div>
+        </article>
+        <article class="reveal-card">
+          <button type="button" class="reveal-toggle">
+            <i class="ti ti-baby-bottle" aria-hidden="true"></i>
+            <span>3. รีเฟล็กซ์พื้นฐาน</span>
+            <i class="ti ti-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="reveal-content">
+            <ul>
+              <li>Rooting reflex: สัมผัสมุมปากแล้วหันเข้าหาสิ่งกระตุ้น</li>
+              <li>Sucking reflex: แตะริมฝีปากแล้วมีการอ้าปากหรือดูดตอบสนอง</li>
+            </ul>
+          </div>
+        </article>
+        <article class="reveal-card">
+          <button type="button" class="reveal-toggle">
+            <i class="ti ti-clock" aria-hidden="true"></i>
+            <span>4. จังหวะเวลาเหมาะสม</span>
+            <i class="ti ti-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="reveal-content">
+            <p>ควรกระตุ้นก่อนมื้อนมถัดไป 15-30 นาที และไม่ทำทันทีหลังให้นมภายใน 30 นาที</p>
+          </div>
+        </article>
+      </section>
 
       <div class="page-nav">
         <button class="secondary-btn" type="button" data-page-target="ch1">บทก่อนหน้า</button>
-        <button class="primary-btn" type="button" data-page-target="ch3">บทถัดไป</button>
+        <button class="primary-btn" type="button" data-page-target="ch2-scenario">ลองเช็คสถานการณ์</button>
+      </div>
+    </section>
+
+    <section class="page" id="page-ch2-scenario" data-page="ch2-scenario">
+      <header class="chapter-hero apricot">
+        <span>บทที่ 2</span>
+        <h2>ลองเช็คสถานการณ์</h2>
+        <p>เลือกสถานการณ์ที่คิดว่าสามารถเริ่มกระตุ้นได้ แล้วดูเฉลยก่อนเข้าสู่บทที่ 3</p>
+      </header>
+
+      <section class="scenario-quiz" data-scenario-quiz>
+        <div class="section-title">
+          <span>ฝึกคิดก่อนเฉลย</span>
+          <h3>เด็กคนไหนสามารถกระตุ้นได้</h3>
+        </div>
+        <div class="scenario-list">
+          <button type="button" class="scenario-card" data-correct="false" data-feedback="ยังไม่ควรเริ่ม เพราะ SpO2 88% ต่ำกว่าช่วงเป้าหมายและมีหายใจเร็ว ควรเลื่อนและแจ้งทีมดูแล">
+            <strong>สถานการณ์ A</strong>
+            <p>SpO2 88% และหายใจเร็ว</p>
+          </button>
+          <button type="button" class="scenario-card" data-correct="true" data-feedback="สามารถเริ่มได้ เพราะสัญญาณชีพอยู่ในช่วงเหมาะสม ทารกตื่นสงบ มีรีเฟล็กซ์ และเป็นเวลาก่อนมื้อนม">
+            <strong>สถานการณ์ B</strong>
+            <p>HR 145, RR 52, SpO2 93%, ตื่นสงบ ก่อนมื้อนม 20 นาที</p>
+          </button>
+          <button type="button" class="scenario-card" data-correct="false" data-feedback="ยังไม่ควรเริ่ม เพราะทารกหลับลึก ควรรอให้ตื่นเองตามธรรมชาติ">
+            <strong>สถานการณ์ C</strong>
+            <p>สัญญาณชีพดี แต่ทารกหลับลึก ไม่ตอบสนอง</p>
+          </button>
+          <button type="button" class="scenario-card" data-correct="false" data-feedback="ยังไม่ควรเริ่ม เพราะเพิ่งให้นมเสร็จ เสี่ยงแหวะนมหรือสำรอก">
+            <strong>สถานการณ์ D</strong>
+            <p>เพิ่งให้นมทางสายเสร็จ 10 นาที</p>
+          </button>
+        </div>
+        <p class="scenario-feedback" data-scenario-feedback>เลือกสถานการณ์เพื่อดูเฉลย</p>
+      </section>
+
+      <div class="page-nav">
+        <button class="secondary-btn" type="button" data-page-target="ch2">กลับบทที่ 2</button>
+        <button class="primary-btn" type="button" data-page-target="ch3">ไปบทที่ 3</button>
       </div>
     </section>
 
@@ -203,7 +258,36 @@
 
       <div class="page-nav">
         <button class="secondary-btn" type="button" data-page-target="ch2">บทก่อนหน้า</button>
-        <button class="primary-btn" type="button" data-page-target="ch4">บทถัดไป</button>
+        <button class="primary-btn" type="button" data-page-target="ch3-check">เช็คอุปกรณ์ก่อนเริ่ม</button>
+      </div>
+    </section>
+
+    <section class="page" id="page-ch3-check" data-page="ch3-check">
+      <header class="chapter-hero mint">
+        <span>บทที่ 3</span>
+        <h2>เลือกอุปกรณ์ก่อนเริ่ม</h2>
+        <p>ติ๊กเลือกสิ่งที่ต้องเตรียมให้ครบ ระวังตัวเลือกหลอก แล้วกดยืนยันเพื่อดูเฉลย</p>
+      </header>
+
+      <section class="equipment-challenge" data-equipment-challenge>
+        <div class="equipment-choice-list">
+          <label><input type="checkbox" value="handwash" data-required="true"> ล้างมือ 7 ขั้นตอน</label>
+          <label><input type="checkbox" value="milk" data-required="false"> เตรียมนมเพื่อป้อนระหว่างนวด</label>
+          <label><input type="checkbox" value="gloves" data-required="true"> ถุงมือสะอาด/ปลอดเชื้อ</label>
+          <label><input type="checkbox" value="pacifier" data-required="true"> จุกนมหลอกเฉพาะราย</label>
+          <label><input type="checkbox" value="phone" data-required="false"> เปิดเสียงโทรศัพท์ไว้ใกล้ทารก</label>
+          <label><input type="checkbox" value="cloth" data-required="true"> ผ้าหรือที่รองจัดท่า</label>
+          <label><input type="checkbox" value="timer" data-required="true"> นาฬิกาหรือตัวจับเวลา</label>
+          <label><input type="checkbox" value="perfume" data-required="false"> ทาโลชั่นหรือกลิ่นหอมที่มือก่อนสัมผัส</label>
+          <label><input type="checkbox" value="quiet" data-required="true"> พื้นที่เงียบ แสงไม่จ้า</label>
+        </div>
+        <button class="primary-btn full-btn" type="button" data-check-equipment>ยืนยันคำตอบ</button>
+        <div class="equipment-result" data-equipment-feedback>เลือกอุปกรณ์ที่คิดว่าจำเป็น แล้วกดยืนยัน</div>
+      </section>
+
+      <div class="page-nav">
+        <button class="secondary-btn" type="button" data-page-target="ch3">กลับบทที่ 3</button>
+        <button class="primary-btn" type="button" data-page-target="ch4">ไปบทที่ 4</button>
       </div>
     </section>
 

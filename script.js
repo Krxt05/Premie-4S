@@ -46,6 +46,8 @@
 
   function chapterForPage(pageName) {
     if (pageName.startsWith("step")) return "ch4";
+    if (pageName === "ch2-scenario") return "ch2";
+    if (pageName === "ch3-check") return "ch3";
     if (/^ch[1-5]$/.test(pageName)) return pageName;
     return null;
   }
@@ -193,4 +195,57 @@
   if (resetQuizButton) {
     resetQuizButton.addEventListener("click", resetQuiz);
   }
+
+  document.querySelectorAll(".reveal-toggle").forEach((button) => {
+    button.addEventListener("click", () => {
+      const card = button.closest(".reveal-card");
+      card?.classList.toggle("open");
+    });
+  });
+
+  document.querySelectorAll(".scenario-card").forEach((button) => {
+    button.addEventListener("click", () => {
+      const quiz = button.closest("[data-scenario-quiz]");
+      const feedback = quiz?.querySelector("[data-scenario-feedback]");
+      quiz?.querySelectorAll(".scenario-card").forEach((card) => {
+        card.classList.remove("correct", "incorrect");
+      });
+
+      const isCorrect = button.dataset.correct === "true";
+      button.classList.add(isCorrect ? "correct" : "incorrect");
+      if (feedback) {
+        feedback.textContent = button.dataset.feedback || "";
+      }
+    });
+  });
+
+  const equipmentChallenge = document.querySelector("[data-equipment-challenge]");
+  const equipmentButton = document.querySelector("[data-check-equipment]");
+  const equipmentFeedback = document.querySelector("[data-equipment-feedback]");
+
+  equipmentButton?.addEventListener("click", () => {
+    if (!equipmentChallenge || !equipmentFeedback) return;
+    const boxes = Array.from(equipmentChallenge.querySelectorAll("input[type='checkbox']"));
+    const required = boxes.filter((box) => box.dataset.required === "true");
+    const decoys = boxes.filter((box) => box.dataset.required === "false");
+    const missing = required.filter((box) => !box.checked);
+    const wrong = decoys.filter((box) => box.checked);
+
+    boxes.forEach((box) => {
+      const label = box.closest("label");
+      label?.classList.remove("correct", "incorrect");
+      if (box.dataset.required === "true") {
+        label?.classList.add("correct");
+      }
+      if (box.dataset.required === "false" && box.checked) {
+        label?.classList.add("incorrect");
+      }
+    });
+
+    const ready = missing.length === 0 && wrong.length === 0;
+    equipmentFeedback.classList.toggle("ready", ready);
+    equipmentFeedback.textContent = ready
+      ? "ถูกต้อง อุปกรณ์จำเป็นครบและไม่เลือกตัวเลือกหลอก สามารถไปบทที่ 4 ได้"
+      : `เฉลย: ข้อที่ถูกคือ ล้างมือ 7 ขั้นตอน, ถุงมือสะอาด/ปลอดเชื้อ, จุกนมหลอกเฉพาะราย, ผ้าหรือที่รองจัดท่า, นาฬิกาหรือตัวจับเวลา, และพื้นที่เงียบ แสงไม่จ้า (ขาด ${missing.length} รายการ เลือกผิด ${wrong.length} รายการ)`;
+  });
 }());

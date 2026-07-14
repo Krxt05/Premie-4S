@@ -536,6 +536,189 @@ h1 {
   border-left: 5px solid var(--apricot-300);
 }
 
+.scenario-quiz,
+.equipment-challenge {
+  margin-bottom: 13px;
+  padding: 17px;
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+
+.section-title span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.section-title h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.reveal-list {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 13px;
+}
+
+.reveal-card {
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+
+.reveal-toggle {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 34px 1fr 22px;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 15px;
+  border: 0;
+  background: #fff;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.reveal-toggle i:first-child {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--apricot-50);
+  color: var(--apricot-700);
+  font-size: 20px;
+}
+
+.reveal-toggle span {
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.reveal-toggle .ti-chevron-down {
+  color: var(--muted);
+  transition: transform .18s ease;
+}
+
+.reveal-card.open .ti-chevron-down {
+  transform: rotate(180deg);
+}
+
+.reveal-content {
+  display: none;
+  padding: 0 16px 15px;
+  border-top: 1px solid var(--line);
+}
+
+.reveal-card.open .reveal-content {
+  display: block;
+}
+
+.reveal-content p,
+.reveal-content li {
+  color: #4f463d;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.scenario-list,
+.equipment-choice-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.scenario-card {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.scenario-card strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.scenario-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.scenario-card.correct {
+  border-color: var(--mint-300);
+  background: var(--mint-50);
+}
+
+.scenario-card.incorrect {
+  border-color: var(--rose-300);
+  background: var(--rose-50);
+}
+
+.scenario-feedback,
+.equipment-result {
+  margin: 12px 0 0;
+  padding: 12px;
+  border-radius: 13px;
+  background: #f1ebe4;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.equipment-choice-list label {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: #fff;
+  color: #4f463d;
+  font-size: 13px;
+}
+
+.equipment-choice-list input {
+  margin-top: 3px;
+  accent-color: var(--ink);
+}
+
+.equipment-choice-list label.correct {
+  border-color: var(--mint-300);
+  background: var(--mint-50);
+}
+
+.equipment-choice-list label.incorrect {
+  border-color: var(--rose-300);
+  background: var(--rose-50);
+}
+
+.full-btn {
+  width: 100%;
+  margin-top: 13px;
+}
+
+.equipment-result.ready {
+  background: var(--mint-50);
+  color: var(--mint-700);
+}
+
 .poster-slot {
   margin-bottom: 14px;
   padding: 0;
